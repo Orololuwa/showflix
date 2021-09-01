@@ -1,5 +1,5 @@
 import { createGlobalStyle } from "styled-components";
-import { primaryFont } from "./theme";
+import { grey, primaryFont } from "./theme";
 
 const Globalstyles = createGlobalStyle`
 *,
@@ -24,6 +24,7 @@ html {
     @media only screen and (min-width: 1200px) {
         font-size: 112.5%;
     }
+    
 }
 
 
@@ -37,6 +38,30 @@ body {
     font-weight: 400;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+}
+
+input {
+    outline: none;
+    border: none;
+    background-color: ${grey[100]};
+    padding: 1.5rem 1rem;
+    border-radius: 15px;
+    color: ${grey[200]};
+
+    &::placeholder{
+        color: ${grey[200]};
+    }
+    
+    @media only screen and (min-width: 600px){
+        padding: 1rem .75rem;
+    }
+}
+
+button {
+    outline: none;
+    border: none;
+}
+
 }
   
 `;

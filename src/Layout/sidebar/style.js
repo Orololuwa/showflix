@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import { grey } from "../../theme";
+import { centerRow } from "../../styles/utilities";
 
 const StyledSideBar = styled.nav`
   display: none;
@@ -8,9 +9,7 @@ const StyledSideBar = styled.nav`
   border-right: 1px solid ${grey[100]};
 
   .logo-wrapper {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    ${centerRow}
 
     .logo {
       margin: 2.5rem;

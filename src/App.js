@@ -1,11 +1,14 @@
 import Globalstyles from "./Global";
 import Layout from "./Layout/Layout";
+import Home from "./pages/Home";
 
 function App() {
   return (
     <>
       <Globalstyles />
-      <Layout>...TeraWork</Layout>
+      <Layout>
+        <Home />
+      </Layout>
     </>
   );
 }
