@@ -1,10 +1,10 @@
 import Button from "../Button";
 import Styled from "./style";
 
-const MovieCard = () => {
+const MovieCard = (props) => {
   return (
     <Styled>
-      <img src="lui.jpg" alt="movie" />
+      <img src={props.poster} alt={props.alt} />
       <Button className="card-button">View</Button>
     </Styled>
   );

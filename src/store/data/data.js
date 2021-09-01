@@ -1,15 +1,22 @@
 import { createSlice } from "@reduxjs/toolkit";
 
 const initialState = {
-  movies: null
+  movies: null,
+  error: ""
 };
 
 const dataSlice = createSlice({
   name: "movies",
   initialState: initialState,
   reducers: {
-    setFeeds: (state, action) => {
+    setMovies: (state, action) => {
       state.movies = action.payload.movies;
+    },
+    clearMovies: (state, action) => {
+      state.movies = null;
+    },
+    setError: (state, action) => {
+      state.error = action.payload.error;
     }
   }
 });

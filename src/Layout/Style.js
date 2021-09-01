@@ -8,6 +8,10 @@ const Styled = styled.div`
   .theContent {
     flex-grow: 1;
   }
+
+  @media only screen and (max-width: 600px) {
+    padding-left: 0;
+  }
 `;
 
 export default Styled;

@@ -26,6 +26,16 @@ const Styled = styled.div`
     padding: 1.5rem 4.5rem;
     font-weight: 600;
     font-size: ${typeScale.header3};
+    border: 1px solid transparent;
+    cursor: pointer;
+    transition: all 0.5s;
+
+    &:hover {
+      background-color: ${black[100]};
+      color: ${grey[100]};
+
+      border: 1px solid ${grey[100]};
+    }
 
     @media only screen and (min-width: 600px) {
       padding: 0.5rem 2.5rem;
