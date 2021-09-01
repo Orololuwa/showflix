@@ -25,6 +25,7 @@ const StyledHome = styled.main`
   .search {
     margin: 1rem 0;
     display: flex;
+    gap: 1rem;
     justify-content: space-between;
     position: relative;
 
@@ -41,7 +42,7 @@ const StyledHome = styled.main`
     }
 
     &-input {
-      width: 23rem;
+      width: 750%;
       font-size: ${typeScale.bodyText1};
 
       @media only screen and (min-width: 600px) {
@@ -70,7 +71,34 @@ const StyledHome = styled.main`
 
       @media only screen and (min-width: 600px) {
         border-radius: 5rem;
-        padding: 1.5rem 5rem;
+        padding: 1rem 5rem;
+      }
+    }
+  }
+
+  .result {
+    &-title {
+      display: flex;
+      align-items: center;
+      gap: 5px;
+      font-weight: 600;
+      font-size: ${typeScale.bodyText1};
+      padding: 10px 0;
+
+      &--subtitle {
+        font-weight: 400;
+      }
+    }
+
+    &-body {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(15rem, 1fr));
+      gap: 2.5rem 1.5rem;
+      justify-items: center;
+      align-items: center;
+
+      @media only screen and (max-width: 600px) {
+        grid-template-columns: repeat(auto-fill, minmax(30rem, 1fr));
       }
     }
   }

@@ -7,6 +7,9 @@ const StyledSideBar = styled.nav`
   height: 100vh;
   width: 15rem;
   border-right: 1px solid ${grey[100]};
+  position: fixed;
+  top: 0;
+  left: 0;
 
   .logo-wrapper {
     ${centerRow}
