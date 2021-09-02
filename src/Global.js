@@ -1,5 +1,5 @@
 import { createGlobalStyle } from "styled-components";
-import { grey, primaryFont } from "./theme";
+import { black, blue, grey, primaryFont } from "./theme";
 
 const Globalstyles = createGlobalStyle`
 *,
@@ -61,6 +61,37 @@ button {
     outline: none;
     border: none;
 }
+
+.active {
+    cursor: pointer;
+    transition: all 0.8s;
+
+    .icon {
+      background-color: ${blue[100]};
+
+      img {
+        width: 100%;
+        fill: blue;
+      }
+    }
+
+    span {
+      font-weight: 600;
+      color: ${black[100]};
+    }
+
+    &::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 6.5px;
+      border-radius: 10px;
+      height: 80%;
+      background-color: ${blue[100]};
+    }
+  }
 
 }
   

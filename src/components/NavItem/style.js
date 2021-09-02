@@ -1,6 +1,7 @@
 import styled from "styled-components";
 import { grey, blue, black, typeScale } from "../../theme";
-const Styled = styled.div`
+import { NavLink } from "react-router-dom";
+const Styled = styled(NavLink)`
   display: flex;
   align-items: center;
   color: ${grey[100]};
@@ -9,6 +10,7 @@ const Styled = styled.div`
   width: 100%;
   padding: 0 1rem;
   margin: 1rem 0;
+  text-decoration: none;
 
   .icon {
     width: 1.75rem;
@@ -32,7 +34,8 @@ const Styled = styled.div`
     padding: 0 0.5rem;
   }
 
-  &:hover {
+  &:hover,
+  &:active {
     cursor: pointer;
     transition: all 0.8s;
 

@@ -3,7 +3,7 @@ import Styled from "./style";
 
 const MovieCard = (props) => {
   return (
-    <Styled>
+    <Styled {...props}>
       <img src={props.poster} alt={props.alt} />
       <Button className="card-button">View</Button>
     </Styled>
