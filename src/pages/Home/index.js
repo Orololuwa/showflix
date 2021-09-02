@@ -88,7 +88,8 @@ const Home = (props) => {
                 alt={movie.title}
                 key={idx}
                 btn
-                onClick={() => history.push(`/preview-${movie.imdbID}`)}
+                clicked={() => history.push(`/preview-${movie.imdbID}`)}
+                btnClick={() => history.push(`/movie-${movie.imdbID}`)}
               />
             ))}
           </div>

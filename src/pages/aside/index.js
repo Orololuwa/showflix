@@ -14,12 +14,10 @@ const Aside = (props) => {
   const history = useHistory();
 
   const [movie, setMovie] = React.useState(null);
-  const [show, setShow] = React.useState(false);
   const [loading, setLoading] = React.useState(false);
 
   //close modal handler
   const closeModalHandler = () => {
-    setShow(false);
     setMovie(null);
     history.goBack();
   };
@@ -35,7 +33,6 @@ const Aside = (props) => {
       })
       .then((res) => {
         setMovie(res.data);
-        setShow(true);
         setLoading(false);
       })
       .catch((error) => {
