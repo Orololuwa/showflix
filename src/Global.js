@@ -1,5 +1,5 @@
 import { createGlobalStyle } from "styled-components";
-import { black, blue, grey, primaryFont } from "./theme";
+import { black, blue, grey, primaryFont, typeScale } from "./theme";
 
 const Globalstyles = createGlobalStyle`
 *,
@@ -93,7 +93,20 @@ button {
     }
   }
 
-}
+  
+  h1 {
+    line-height: 4.3rem;
+    font-size: ${typeScale.header1};
+    }
+    h2 {
+        line-height: 2.8rem;
+        font-size: ${typeScale.header2};
+    }
+    h3 {font-size: ${typeScale.header3};}
+    h4 {font-size: ${typeScale.header4};}
+    h5 {font-size: ${typeScale.header5};}
+
+    }
   
 `;
 

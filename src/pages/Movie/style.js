@@ -13,17 +13,43 @@ const Styled = styled.main`
       display: flex;
       flex-direction: column;
       justify-content: space-between;
+      gap: 2rem;
+
+      @media only screen and (min-width: 600px) {
+        gap: 0;
+      }
+
+      .title {
+        h3 {
+          padding-bottom: 1.5rem;
+          font-size: ${typeScale.header2};
+
+          @media only screen and (min-width: 600px) {
+            font-size: ${typeScale.bodyText3};
+          }
+        }
+
+        p {
+          font-size: ${typeScale.header3};
+          line-height: 3rem;
+
+          @media only screen and (min-width: 600px) {
+            font-size: ${typeScale.bodyText3};
+            line-height: 2rem;
+          }
+        }
+      }
 
       .actions {
         display: flex;
         align-items: center;
         flex-wrap: wrap;
-        gap: 3.5rem;
 
         span {
           display: flex;
           align-items: center;
           gap: 1rem;
+          margin-right: 3.5rem;
 
           .icon {
             width: 1.5rem;
@@ -32,18 +58,29 @@ const Styled = styled.main`
           }
 
           p {
+            font-size: ${typeScale.bodyText1};
+
+            @media only screen and (min-width: 600px) {
+              font-size: ${typeScale.bodyText3};
+            }
           }
         }
       }
 
       .buttons {
+        display: flex;
+        align-items: center;
         &-1 {
           border-radius: 5rem;
           font-size: ${typeScale.bodyText2};
-          padding: 1rem 2.5rem;
+          padding: 1.5rem 2.5rem;
           margin: 1rem 0;
           text-align: center;
           margin-right: 1.5rem;
+
+          @media only screen and (min-width: 600px) {
+            padding: 1rem 2.5rem;
+          }
         }
 
         &-2 {

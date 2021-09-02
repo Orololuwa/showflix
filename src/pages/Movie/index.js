@@ -49,7 +49,7 @@ const Movie = () => {
               <MovieCard poster={movie.Poster} alt={movie.Title} />
             </div>
             <div className="movie-right">
-              <span>
+              <span className="title">
                 <h3>{movie.Title}</h3>
                 <p>{movie.Plot}</p>
               </span>

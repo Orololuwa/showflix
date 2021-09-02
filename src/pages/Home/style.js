@@ -19,6 +19,10 @@ const StyledHome = styled.main`
 
     @media only screen and (min-width: 600px) {
       padding: 0 0 1.5rem 0;
+
+      h1 {
+        font-size: ${typeScale.header3};
+      }
     }
   }
 
@@ -82,11 +86,16 @@ const StyledHome = styled.main`
       align-items: center;
       gap: 5px;
       font-weight: 600;
-      font-size: ${typeScale.bodyText1};
+      font-size: ${typeScale.header3};
+      margin-bottom: 2.5rem;
       padding: 10px 0;
 
       &--subtitle {
         font-weight: 400;
+      }
+
+      @media only screen and (min-width: 600px) {
+        font-size: ${typeScale.bodyText3};
       }
     }
 

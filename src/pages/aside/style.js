@@ -11,12 +11,12 @@ const moveInLeft = keyframes`
     }
 `;
 
-const moveOutLeft = keyframes`
+const moveInBottom = keyframes`
     0% {
-        transform: translateX(0);
+        transform: translateY(100%);
     }
     100% {
-        transform: translateX(100%);
+        transform: translateY(0);
     }
 `;
 
@@ -25,10 +25,10 @@ const Styled = styled.div`
   width: 20rem;
   background-color: ${white[100]};
   position: absolute;
-  top: 0;
+  bottom: 0;
   right: 0;
   animation: ${moveInLeft} 0.5s;
-  padding: 1rem;
+  padding: 2rem;
   z-index: 9000000;
   overflow-y: scroll;
   -ms-overflow-style: none;
@@ -57,6 +57,26 @@ const Styled = styled.div`
   h3,
   p {
     margin: 0.5rem 0;
+    padding: 1rem 0;
+  }
+
+  h3 {
+    padding-top: 3.5rem;
+    font-size: ${typeScale.header2};
+
+    @media only screen and (min-width: 600px) {
+      font-size: ${typeScale.bodyText3};
+    }
+  }
+
+  p {
+    font-size: ${typeScale.header3};
+    line-height: 3rem;
+
+    @media only screen and (min-width: 600px) {
+      font-size: ${typeScale.bodyText3};
+      line-height: 2rem;
+    }
   }
 
   .btn {
@@ -69,6 +89,8 @@ const Styled = styled.div`
 
   @media only screen and (max-width: 600px) {
     width: 100%;
+    animation: ${moveInBottom} 0.5s;
+    height: 75vh;
   }
 `;
 
