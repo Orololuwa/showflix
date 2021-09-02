@@ -12,6 +12,7 @@ const Styled = styled.div`
   img {
     height: 100%;
     width: 100%;
+    border-radius: 15px;
     object-fit: cover;
   }
 

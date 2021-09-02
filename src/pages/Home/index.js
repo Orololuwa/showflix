@@ -85,7 +85,7 @@ const Home = (props) => {
             {movies.map((movie, idx) => (
               <MovieCard
                 poster={movie.Poster}
-                alt={movie.title}
+                alt={movie.Title}
                 key={idx}
                 btn
                 clicked={() => history.push(`/preview-${movie.imdbID}`)}
