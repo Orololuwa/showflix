@@ -10,15 +10,15 @@ import { fetchMovies } from "../../store/data/data-actions";
 import { dataActions } from "../../store/data/data";
 import Loading from "../../components/Loading";
 import ErrorView from "../../components/Error";
+import { useHistory, Route } from "react-router";
 import Aside from "../aside";
 
 const Home = (props) => {
   const dispatch = useDispatch();
+  const history = useHistory();
   const movies = useSelector((state) => state.data.movies);
   const error = useSelector((state) => state.data.error);
   const [loading, setLoading] = React.useState(false);
-
-  const [asideShow, setAsideShow] = React.useState(false);
 
   //search values from input
   const [searchWord, setSearchWords] = React.useState("");
@@ -50,7 +50,9 @@ const Home = (props) => {
 
   return (
     <StyledHome>
-      <Aside show={asideShow} onConfirm={() => setAsideShow(false)} />
+      <Route path="/preview-:id">
+        <Aside />
+      </Route>
       <div className="logo">
         <img src={Logo} alt="logo" />
       </div>
@@ -85,7 +87,8 @@ const Home = (props) => {
                 poster={movie.Poster}
                 alt={movie.title}
                 key={idx}
-                onClick={() => setAsideShow(true)}
+                btn
+                onClick={() => history.push(`/preview-${movie.imdbID}`)}
               />
             ))}
           </div>

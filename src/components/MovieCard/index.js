@@ -5,7 +5,7 @@ const MovieCard = (props) => {
   return (
     <Styled {...props}>
       <img src={props.poster} alt={props.alt} />
-      <Button className="card-button">View</Button>
+      {props.btn && <Button className="card-button">View</Button>}
     </Styled>
   );
 };

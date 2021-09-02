@@ -8,8 +8,12 @@ function App() {
     <>
       <Globalstyles />
       <Layout>
-        <Switch to="/" exact>
-          <Route>
+        <Switch>
+          <Route path="/" exact>
+            <Home />
+          </Route>
+
+          <Route path="*">
             <Home />
           </Route>
         </Switch>
