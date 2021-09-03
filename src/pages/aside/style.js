@@ -11,6 +11,15 @@ const moveInLeft = keyframes`
     }
 `;
 
+const moveOutLeft = keyframes`
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(100%);
+    }
+`;
+
 const moveInBottom = keyframes`
     0% {
         transform: translateY(100%);
@@ -20,14 +29,29 @@ const moveInBottom = keyframes`
     }
 `;
 
+const moveOutBottom = keyframes`
+    0% {
+        transform: translateY(0);
+    }
+    100% {
+        transform: translateY(100%);
+    }
+`;
+
 const Styled = styled.div`
   height: 100vh;
   width: 20rem;
   background-color: ${white[100]};
-  position: absolute;
+  position: fixed;
   bottom: 0;
   right: 0;
-  animation: ${moveInLeft} 0.5s;
+  animation: ${({ anim }) =>
+      anim.state === "entering"
+        ? moveInLeft
+        : anim.state === "exiting"
+        ? moveOutLeft
+        : null}
+    0.5s;
   padding: 2rem;
   z-index: 9000000;
   overflow-y: scroll;
@@ -89,7 +113,13 @@ const Styled = styled.div`
 
   @media only screen and (max-width: 600px) {
     width: 100%;
-    animation: ${moveInBottom} 0.5s;
+    animation: ${({ anim }) =>
+        anim.state === "entering"
+          ? moveInBottom
+          : anim.state === "exiting"
+          ? moveOutBottom
+          : null}
+      0.5s;
     height: 75vh;
   }
 `;
