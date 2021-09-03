@@ -23,7 +23,7 @@ const Movie = () => {
   React.useEffect(() => {
     setLoading(true);
     axios
-      .post(`http://www.omdbapi.com/`, null, {
+      .post(`https://www.omdbapi.com/`, null, {
         params: {
           i: id,
           apikey: apikey

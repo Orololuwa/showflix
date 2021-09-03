@@ -6,7 +6,7 @@ const apikey = process.env.REACT_APP_API_KEY;
 export const fetchMovies = (searched) => {
   return async (dispatch) => {
     try {
-      const res = await axios.post(`http://www.omdbapi.com/`, null, {
+      const res = await axios.post(`https://www.omdbapi.com/`, null, {
         params: {
           s: searched,
           apikey: apikey
